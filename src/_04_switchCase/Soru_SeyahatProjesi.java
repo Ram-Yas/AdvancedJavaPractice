@@ -38,6 +38,62 @@ todo İPUCU:  toplamTutar, işlem, FrankfurtKm, KmBirimFiyat   gibi sabit veri t
         4.Double para üstünü yazdırın.
          */
 
+Scanner scan = new Scanner(System.in);
+        System.out.println("seyahat sirketimize hosgeldiniz.");
+        System.out.println("Frankfurt: 60km \nKoln: 80km\n20Km basina 5 euro ucretlendirme yapilir");
+        System.out.print("yolculuk yapacaginiz sehri seciniz: ");
+        String hedef = scan.next().toUpperCase();//sehir ismnini buyuk harfe update edilir
+        double bakiye = 100;
+        double frUcret = (60/20)*5;
+        double klUcret = (80/20)*5;
+
+        switch (hedef){
+            default://switch in basina koyulabilir. sikinti yok
+                System.out.println("hatali giris yaptiniz");
+                break;
+            case "FRANKFURT" : // burada da ic ice switxh case yaptik
+                System.out.println("ROTA: Frankfurt");
+                System.out.println("Frnkfurt "+frUcret+"Euro");
+                System.out.println("kac kisi seyahat edeceksiniz? ");
+                int kisi = scan.nextInt();
+                switch (kisi){
+                    case 1 :
+                        System.out.println("1 kisilik bilet talep ettiniz" +
+                                "bilet tutariniz: "+frUcret+ "Euro" +
+                                "guncel bakiyeniz"+ (bakiye-=frUcret));
+                        break;
+                    case 2:
+                        System.out.println("2 kisilik bilet talep ettiniz" +
+                                "bilet tutariniz: "+frUcret+ "Euro" +
+                                "guncel bakiyeniz"+ (bakiye-=frUcret*2));
+                        break;
+                    default:
+                        System.out.println("max 2 kisi ");
+                        break;
+                }
+                break;
+            case "KOLN" :
+                System.out.println("ROTA: KOLN");
+                System.out.println("Frnkfurt"+klUcret+"Euro");
+                System.out.println("kac kisi seyahat edeceksiniz");
+                int kisi1 = scan.nextInt();
+                switch (kisi1){
+                    case 1 :
+                        System.out.println("1 kisilik bilet talep ettiniz" +
+                                "bilet tutariniz: "+klUcret+ "Euro" +
+                                "guncel bakiyeniz"+ (bakiye-=klUcret));
+                        break;
+                    case 2:
+                        System.out.println("2 kisilik bilet talep ettiniz" +
+                                "bilet tutariniz: "+klUcret+ "Euro" +
+                                "guncel bakiyeniz"+ (bakiye-=klUcret*2));
+                        break;
+                    default:
+                        System.out.println("max 2 kisi ");
+                        break;
+                }
+                break;
+        }
 
 
     }
