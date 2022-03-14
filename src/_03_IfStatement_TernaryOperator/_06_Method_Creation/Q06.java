@@ -9,7 +9,25 @@ public class Q06 {
         input: "aabbcccccddddaaa"
         output: abcd
      */
+ public static void main(String[] args) {
+
+     String input = "aabbcccccddddaaa";
+
+     karakterBirKereYazdir(input);
+
+ }
+
+    private static void karakterBirKereYazdir(String input) {
+
+     input = input.toLowerCase();
+
+        for (int i = 0; i <=input.length() ; i++) {
+
+
+            }
+
+        }
+    }
 
 
 
-}
