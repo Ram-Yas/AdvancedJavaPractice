@@ -12,6 +12,25 @@ public class Q08 {
     İnput : Allah Javacı arkadaşlara  zihin açıklığı versin
     Output : versin açıklığı zihin arkadaşlara Javacı Allah
      */
+  public static void main(String[] args) {
 
+      String input = "Allah Javacı arkadaşlara  zihin açıklığı versin";
+      reverseWord(input);
+     // System.out.println();
+
+  }
+
+    private static void reverseWord(String input) {
+
+      String str2 = "";
+
+        for (int i = input.length() - 1; i >= 0; i--) {
+            str2+=input.substring(input.charAt(' '), input.length());
+
+        }
+
+        System.out.println(str2);
+//return str2;
+    }
 
 }

@@ -18,6 +18,9 @@ public class Q09 {
                  2 , tek basamaklı olduğundan, bunu döndürün.
     */
 
+    public static void main(String[] args) {
+
+         }
 
 
 }
