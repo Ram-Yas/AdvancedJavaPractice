@@ -9,5 +9,14 @@ public class Q02 {
        ad ayrı soyad ayrı sekilde ekrana yazdırınız.
        */
 
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Adinizi ve soyadinizi girin :");
+        String adSoyad = scan.nextLine();
+        String ad = adSoyad.substring(0, adSoyad.indexOf(' '));
+        String soyad = adSoyad.substring(adSoyad.indexOf(' ')+1);
+
+        System.out.println("Ad : " + ad);
+        System.out.println("Soyad : " + soyad);
+
     }
 }

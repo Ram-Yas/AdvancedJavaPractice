@@ -13,7 +13,17 @@ public class Q03 {
          str.CharAt(0)
 
          */
+        String str = " Bugün hava oldukca güzel.";
+        int sayi = 0;
 
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'a') {
+                sayi++;
+            }
+            if (str.charAt(i)=='c') break;
+
+        }
+        System.out.println(sayi);
 
     }
 }

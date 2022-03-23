@@ -13,6 +13,13 @@ public class Q09 {
 		     	INPUT      :  Python
 				OUTPUT :   Pyt
 	    */
-
+        Scanner scan = new Scanner(System.in);
+        System.out.print("isminizi girin : ");
+        String input = scan.next();
+        if(input.length()%2==0){
+            System.out.println("Kelimenin ilk yarisi : "+ input.substring(0,input.length()/2));
+        } else {
+            System.out.println("Girdiginiz kelime cift uzunlukta degil");
+        }
     }
 }

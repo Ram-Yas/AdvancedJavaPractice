@@ -14,7 +14,15 @@ public class Q19 {
 
     public static void main(String[] args) {
 
+        int sayi = 5;
 
+        for (int i = 0; i <= sayi; i++) {
+            for (int j = 0; j < sayi - i; j++) {
+                System.out.println(" ");
+            }
+
+
+        }
     }
 }
 

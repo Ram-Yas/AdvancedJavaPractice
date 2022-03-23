@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Q08 {
     public static void main(String[] args) {
         /* TASK :
-         * Kulanicidan bir kelime isteyin eger kelime 3 ve daha fazla harfden olusuyorsa son
-         * iki harfini 3 kere yan yana yazdirin. degil ise girilen kelimeyi yazdirin
+         * Kulanicidan bir kelime isteyin eger kelime 3 ve daha fazla harfden olusuyorsa
+         * son iki harfini 3 kere yan yana yazdirin. degil ise girilen kelimeyi yazdirin
          *
          * ornek
          * input = Ali
@@ -15,6 +15,13 @@ public class Q08 {
          * input = el
          * output = el
          */
+        String input = "Ali";
 
+        if (input.length() >= 3) {
+            System.out.println(input.substring(input.length()-2)+
+                                input.substring(input.length()-2)+
+                                input.substring(input.length()-2));
+        } else
+            System.out.println(input);
     }
 }

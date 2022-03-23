@@ -16,6 +16,17 @@ public class Q12 {
         Kareler toplamı=30
      */
 
+        Scanner scan = new Scanner(System.in);
+        System.out.print("bir sayi gitin : ");
+        int sayi = scan.nextInt();
+int toplam = 0;
+
+        for (int i = 1; i <=sayi ; i++) {
+            toplam +=(i*i);
+        }
+
+        System.out.println("Girilen sayi : "+sayi);
+        System.out.println("Kareler toplami : "+ toplam);
 
 
     }

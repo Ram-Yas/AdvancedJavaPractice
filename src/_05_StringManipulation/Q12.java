@@ -15,6 +15,23 @@ public class Q12 {
        INPUT : techproed@hotmail.com OUTPUT : "Lutfen gmail hesabinizi girin"
        */
 
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Emailinizi girin : ");
+        String email = scan.next();
+        String arananaMetin = "gmail.com";
+
+        if (email.contains("@")) {
+            if (email.contains(arananaMetin)){
+                System.out.println("email onaylandi");
+            }
+            else {
+                System.out.println("Lutfen gmail hesabinizi girin");
+            }
+
+        } else {
+            System.out.println("gecerli bir email girin.");
+        }
+
     }
 
 }

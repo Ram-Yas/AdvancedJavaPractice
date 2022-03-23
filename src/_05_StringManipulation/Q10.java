@@ -20,7 +20,25 @@ public class Q10 {
 		 3) \\s   ==> space
 		 	 \\S   ==> space disindaki hersey
 	 */
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Adinizi girin : ");
+        String isim = scan.next();
+        System.out.print("Soyadinizi girin : ");
+        String soyad = scan.next();
+        System.out.println("Kredi karti numaranizi girin : ");
+        String kKNo = scan.next();
 
+        if(kKNo.length()<16){
+            System.out.println("Geçersiz kredi kartı numarası");
+        }
+
+        System.out.println("Ad :" + isim.toUpperCase().charAt(0)+
+                                    isim.substring(1).replaceAll("\\w", "*"));
+
+        System.out.println("Soyad :" + soyad.toUpperCase().charAt(0)+
+                soyad.substring(1).replaceAll("\\w", "*"));
+
+        System.out.println("Kartno : **** **** **** "+kKNo.substring(kKNo.length()-4).replaceAll("\\w", "*"));
 
     }
 }

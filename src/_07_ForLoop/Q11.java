@@ -20,8 +20,25 @@ public class Q11 {
 
         */
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("bir sayi girin: ");
 
+        int sayi = scan.nextInt();
+        int toplam = 0;
 
+        for (int i = 1; i < sayi; i++) {
+
+            if(sayi%i==0){
+                System.out.print(i+" ,");
+                toplam+=i;
+            }
+        }
+        System.out.println("toplam = " + toplam);
+        if(toplam==sayi){
+            System.out.println("sayi mukemmeldir");
+        } else {
+            System.out.println("sayi mukemmel degildir");
+        }
     }
 
 
