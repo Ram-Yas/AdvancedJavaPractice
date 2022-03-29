@@ -11,6 +11,7 @@ public class Q01 {
 	 java code create ediniz.
 
 	 */
+
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
