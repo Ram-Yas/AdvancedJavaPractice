@@ -1,6 +1,5 @@
-package Projects.Projects_02;
+package projects.Projects_02;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class changeArray {

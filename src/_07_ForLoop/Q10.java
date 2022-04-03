@@ -31,6 +31,24 @@ public class Q10 {
      */
     public static void main(String[] args) {
 
+        Scanner scan = new Scanner(System.in);
+        System.out.println("bir harf girin : ");
+        String  harf = scan.next();
+
+        String sesli = "aeiou";
+
+        //for (int i = 0; i < sesli.length(); i++) {
+            if (harf.length()>1 ){
+                System.out.println("yanlis karakter girdiniz");
+            } else{
+                if (sesli.contains(harf)){
+                    System.out.println("girdiginiz harf seslidir.");
+                }else {
+                    System.out.println("girdiginiz harf sessizdir");
+                }
+            }
+        //}
+
 
     }
 

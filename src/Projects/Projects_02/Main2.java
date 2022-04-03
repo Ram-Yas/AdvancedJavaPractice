@@ -1,4 +1,4 @@
-package Projects.Projects_02;
+package projects.Projects_02;
 
 public class Main2 {
     public static void main(String[] args) {

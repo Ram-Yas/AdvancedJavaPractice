@@ -1,4 +1,4 @@
- package Projects.Projects_01;
+ package projects.Projects_01;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -9,7 +9,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
-import java.util.Random;
 
  public class test1 {
 
