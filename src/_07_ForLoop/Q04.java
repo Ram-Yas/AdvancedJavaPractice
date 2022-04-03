@@ -11,12 +11,13 @@ public class Q04 {
         */
 
         Scanner scan = new Scanner(System.in);
-        System.out.print("5 tane sayi giriniz : ");
-        int sayi1 = scan.nextInt();
+
+
         int sayi2 = scan.nextInt();
         int sayi3 = scan.nextInt();
         int sayi4 = scan.nextInt();
         int sayi5 = scan.nextInt();
+        System.out.print("5 tane sayi giriniz : ");
 
 
     }

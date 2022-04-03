@@ -9,7 +9,15 @@ public class Q08 {
         String’in palindrome olup olmadigini kontrol eden bir program yazin.
 
          */
+Scanner scanner = new Scanner(System.in);
+        System.out.println("bir string giriniz: ");
+        String str = scanner.next();
 
+        for (int i = 0; i < str.length(); i++){
+            if (str.charAt(i) ==str.charAt(str.length()-1)){
+
+            }
+        }
 
     }
 
