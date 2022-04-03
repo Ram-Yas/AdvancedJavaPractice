@@ -16,6 +16,20 @@ public class T04_SayiTahminKredili {
            int sayi variable'a assign edilmeli.
          */
 
+        Random rnd = new Random();
+        int tahminEdilecekSayi = rnd.nextInt(101);
+        System.out.println(tahminEdilecekSayi);
+        Scanner scan = new Scanner(System.in);
+        System.out.println("bir sayi girin");
+        int sayi = scan.nextInt();
+
+        while (tahminEdilecekSayi!=sayi) {
+            if (tahminEdilecekSayi>sayi){
+                System.out.println("sayiyi artirin ");
+            }else
+                System.out.println("sayiyi azaltin");
+
+        };
 
     }
 }
