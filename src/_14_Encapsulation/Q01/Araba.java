@@ -4,9 +4,9 @@ public class Araba {//POJO : planning old java object-->modal class
                     //API testinde kullaniliyor
 
    private String model;//encapsulated oldugu icin private
-    private String renk;
-    private int motor;
-    private int yil;
+   private String renk;
+   private int motor;
+   private int yil;
 
     public Araba() { //p'siz cons
     }
