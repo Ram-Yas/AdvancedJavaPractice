@@ -14,8 +14,12 @@ public class Araba {//POJO : planning old java object-->modal class
     public Araba(String model, String renk, int motor, int yil) {//p'li constructor
         this.model = model;
         this.renk = renk;
-        this.motor = motor;
-        this.yil = yil;
+        //this.motor = motor;
+       // this.yil = yil;
+        setMotor(motor); //cons abj create etmek icin parametre olarak giren motor datasi
+                        // setMotor methoduna parametre olarak calistigi degerini aldi
+
+        setYil(yil);
     }
 
     public String getModel() {
@@ -39,6 +43,9 @@ public class Araba {//POJO : planning old java object-->modal class
     }
 
     public void setMotor(int motor) {
+        if (motor<1000){
+            System.out.println("agam bizimle eglenir bu cc'de motor mu olur");
+        }else
         this.motor = motor;
     }
 
@@ -47,16 +54,21 @@ public class Araba {//POJO : planning old java object-->modal class
     }
 
     public void setYil(int yil) {
+        if (yil<0){//burada hatali girise karsi korumaya aldik
+            this.yil =(-1)*yil;
+            System.out.println("agam napiyon once araba vardi da biz mi");
+            this.motor = 1200;
+        }else
         this.yil = yil;
     }
 
-    public Araba(int motor, int yil) {
-        this.motor = motor;
-        this.yil = yil;
+    public Araba(int motor, int yil) { //p'li constructor haciMurat objesinin olsturuldugu yer
+        setMotor(motor);
+        setYil(yil);
     }
 
     @Override //annotation
-    public String toString() { //bu method bu class dan creat edilen objeleri
+    public String toString() { //bu method bu class dan create edilen obj istenen field'larını stringe çeviririr
         return "Araba{" +
                 "model='" + model + '\'' +
                 ", renk='" + renk + '\'' +
@@ -64,4 +76,5 @@ public class Araba {//POJO : planning old java object-->modal class
                 ", yil=" + yil +
                 '}';
     }
+
 }
