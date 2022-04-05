@@ -21,12 +21,15 @@ public class Q06 {
 
     public static void main(String[] args) {
 
-        int sayi = 5;
-        for (int i = 1; i <=sayi ; i++) {
-            for (int j = 1; j <=sayi ; j++) {
-                System.out.print(i*j+ "\t");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Pozitif bir tamsayi girin: ");
+        int sayi = scan.nextInt();
+
+        for (int baba = 1; baba <=sayi; baba++) {//satır kontrolu
+            for (int ogul = 1; ogul <=sayi; ogul++) {//sutun kontrolu
+                System.out.print(" "+(baba*ogul)+"\t");
             }
-            System.out.println();
+            System.out.println();//2 boyutlu for da iç ve dış döngü arasına satır atlaması için boş println koyulur
         }
     }
 

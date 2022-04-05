@@ -9,17 +9,21 @@ public class Q08 {
         String’in palindrome olup olmadigini kontrol eden bir program yazin.
 
          */
-Scanner scanner = new Scanner(System.in);
-        System.out.println("bir string giriniz: ");
-        String str = scanner.next();
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Lutfen bir cumle  giriniz: ");
+        String str = scanner.nextLine();
+        String tersCumle = "";
 
-        for (int i = 0; i < str.length(); i++){
-            if (str.charAt(i) ==str.charAt(str.length()-1)){
-
-            }
+        for (int i = str.length()-1; i >=0; i--) {
+            tersCumle += str.charAt(i);
         }
 
-    }
+            if (str.equals(tersCumle)){
+                System.out.println("Cumle Polindrome");
+            }else System.out.println("Cumle Polindrome degildir");
+        }
+
+
 
 }
 

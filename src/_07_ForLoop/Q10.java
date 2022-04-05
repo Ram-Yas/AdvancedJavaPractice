@@ -32,22 +32,29 @@ public class Q10 {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("bir harf girin : ");
-        String  harf = scan.next();
+        System.out.print("bir harf girin : ");
+        String  kelime = scan.next();
 
-        String sesli = "aeiou";
+        String sesliHarf = "aeiou";
+        String sessizHarf = "bcdfghjklmnprstvyzxwq";
 
         //for (int i = 0; i < sesli.length(); i++) {
-            if (harf.length()>1 ){
-                System.out.println("yanlis karakter girdiniz");
-            } else{
-                if (sesli.contains(harf)){
-                    System.out.println("girdiginiz harf seslidir.");
-                }else {
-                    System.out.println("girdiginiz harf sessizdir");
+            if (kelime.length()==1 ){
+                for (int i = 0; i < sesliHarf.length(); i++) {
+                    if (sesliHarf.contains(kelime)){
+                        System.out.println("sesli");
+                        break;
+                    }else if (sessizHarf.contains(kelime)){
+                        System.out.println("sessiz");
+                        break;
+                    }else   System.out.println("yanlis karakter girdiniz");
+                    break;
                 }
-            }
-        //}
+
+            }else {
+            System.out.println("yanlis karakter girdiniz");
+        }
+
 
 
     }
