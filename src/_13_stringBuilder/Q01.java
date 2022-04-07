@@ -3,6 +3,7 @@ package _13_stringBuilder;
 import java.util.Scanner;
 
 public class Q01 {
+
     public static void main(String[] args) {
 		/*
 		Bir cümleyi parametre olarak kabul eden, StringBuilder kullanarak cümleyi ters çeviren ve cümlenin palindrom
@@ -13,6 +14,8 @@ public class Q01 {
 	        It is not a palindrome"
 
 		 */
+
+
 
     }
 
