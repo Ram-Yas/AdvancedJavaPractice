@@ -11,6 +11,7 @@ public class Araba {//POJO : planning old java object-->modal class
     public Araba() { //p'siz cons
     }
 
+
     public Araba(String model, String renk, int motor, int yil) {//p'li constructor
         this.model = model;
         this.renk = renk;
