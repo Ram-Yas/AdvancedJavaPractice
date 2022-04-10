@@ -14,6 +14,7 @@ public class Q11 {
   ve cekme, çıkış işlemlerinin yapıldıgı bir
    ATM app. method create ediniz
    */
+
         System.out.println("    ****    ");
         System.out.println("    ATM'ye hos geldiniz  :-)    ");
         System.out.println("Bakiye sorgulama : 1\nPara cekme : 2\nPara yatırma : 3\ncıkıs : 4 ");

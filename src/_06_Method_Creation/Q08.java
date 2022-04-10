@@ -15,9 +15,24 @@ public class Q08 {
     public static void main(String[] args) {
 
         String input = "Allah Javacı arkadaşlara  zihin açıklığı versin";
-        // reverseWord(input);
-        // System.out.println();
+        System.out.println(reverseWord(input));
 
+
+    }
+
+    private static String reverseWord(String input) {
+
+        String reversed = "";
+        String arr[] = input.split(" ");
+
+        for (int i = arr.length - 1; i >= 0; i--) {
+
+            reversed+=arr[i]+" ";
+        }
+
+
+
+        return reversed;
     }
 
 

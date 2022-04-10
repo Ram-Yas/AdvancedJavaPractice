@@ -9,6 +9,7 @@ public class Q06 {
         input: "aabbcccccddddaaa"
         output: abcd
      */
+
  public static void main(String[] args) {
 
      String input = "aabbcccccddddaaa";
