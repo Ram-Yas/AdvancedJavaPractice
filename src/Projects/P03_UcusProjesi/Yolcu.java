@@ -2,8 +2,6 @@ package Projects.P03_UcusProjesi;
 
 public class Yolcu {
 
-
-
     String city;
     String flytype;
 
