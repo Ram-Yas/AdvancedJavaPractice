@@ -1,4 +1,4 @@
-package projects.P04_okulYönetimi;
+package Projects.P04_okulYönetimi;
 
 
 public class Main {
