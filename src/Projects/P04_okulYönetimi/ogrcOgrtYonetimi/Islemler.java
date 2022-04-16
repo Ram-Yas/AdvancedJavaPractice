@@ -23,11 +23,11 @@ public class Islemler {
 
         switch (secim) {
             case "1":
-                kisiTuru="OGRENCI";
+                kisiTuru = "OGRENCI";
                 islemMenusu();
                 break;
             case "2":
-                kisiTuru="OGRETMEN";
+                kisiTuru = "OGRETMEN";
                 islemMenusu();
                 break;
             case "Q":
@@ -44,8 +44,8 @@ public class Islemler {
         System.out.println("Eline saglik yine bekleriz.....");
     }
 
-    public static void islemMenusu(){
-        System.out.println("Sectiginiz Kişi turu :  "+kisiTuru+" icin aşağıdaki işlemleri gösteren============= İŞLEMLER =============\n" +
+    public static void islemMenusu() {
+        System.out.println("Sectiginiz Kişi turu :  " + kisiTuru + " icin aşağıdaki işlemleri gösteren============= İŞLEMLER =============\n" +
                 "\t\t 1-EKLEME\n" +
                 "\t\t 2-ARAMA\n" +
                 "\t\t 3-LİSTELEME\n" +
@@ -54,21 +54,21 @@ public class Islemler {
         System.out.print("Islem tercihinizi giriniz: ");
         int secilenIslem = scan.nextInt();
 
-        switch(secilenIslem){
-            case 1 :
+        switch (secilenIslem) {
+            case 1:
                 ekle();
                 islemMenusu();
                 break;
             case 2:
+                arama();
                 islemMenusu();
-
                 break;
             case 3:
-
+                listele();
                 islemMenusu();
                 break;
             case 4:
-
+                sil();
                 islemMenusu();
                 break;
             case 0:
@@ -80,8 +80,101 @@ public class Islemler {
         }
     }
 
+    private static void arama() {
+        System.out.println("   ***   " + kisiTuru + " arama sayfası   ***");
+        boolean kontrol = true;
+        if (kisiTuru.equalsIgnoreCase("OGRENCI")) {
+            scan.next();
+            System.out.print("Aradğığınız öğrencinin kimlik no giriniz.");
+            String arananKimlikNo = scan.nextLine();
+            for (Kisi k : ogrenciListesi) {
+                if (k.getKimlikNo().equalsIgnoreCase(arananKimlikNo)) {
+                    System.out.println("Aradığınız : " + k.getAdSoyad());
+                    kontrol = false;
+                }
+            }
+            if (kontrol) {
+                System.out.println("aradıgınız ogrenci mevcut degildir");
+            }
+        } else {
+            if (kisiTuru.equalsIgnoreCase("OGRETMEN")) {
+                System.out.print("Aradğığınız öğretmenin kimlik no giriniz.");
+                String arananKimlikNo = scan.nextLine();
+                for (Kisi k : ogretmenListesi) {
+                    if (k.getKimlikNo().equalsIgnoreCase(arananKimlikNo)) {
+                        System.out.println("Aradığınız : " + k.getAdSoyad());
+                        kontrol = false;
+                    }
+                }
+                if (kontrol) {
+                    System.out.println("aradıgınız ogrenci mevcut degildir");
+                }
+            }
+        }
+    }
+
+    private static void sil() {
+        System.out.println("   ***   " + kisiTuru + " silme sayfası   ***");
+
+        boolean kontrol = true;
+        if (kisiTuru.equalsIgnoreCase("OGRENCI")) {
+            scan.next();
+            System.out.print("Silinecek öğrencinin kimlik no giriniz.");
+
+            String silinenKimlikNo = scan.nextLine();
+
+
+            for (Kisi k : ogrenciListesi) {
+                if (k.getKimlikNo().equalsIgnoreCase(silinenKimlikNo)) {
+                    System.out.println("Silinecek : " + k.getAdSoyad());
+                    ogrenciListesi.remove(k);
+                    kontrol = false;
+                    break;
+                }
+
+            }
+            if (kontrol) {
+                System.out.println("silinecek ogrenci mevcut degildir");
+            }
+        } else {
+
+            if (kisiTuru.equalsIgnoreCase("OGRETMEN")) {
+                System.out.print("Silinecek öğretmenin kimlik no giriniz.");
+                String silinecekKimlikNo = scan.nextLine();
+
+                for (Kisi k : ogretmenListesi) {
+                    if (k.getKimlikNo().equalsIgnoreCase(silinecekKimlikNo)) {
+                        System.out.println("Sileceğiniz : " + k.getAdSoyad());
+                        ogretmenListesi.remove(k);
+                        kontrol = false;
+                        break;
+                    }
+
+                }
+                if (kontrol) {
+                    System.out.println("Silinecek ogrenci mevcut degildir");
+                }
+
+
+            }
+
+        }
+    }
+
+    private static void listele() {
+        System.out.println("   ***   " + kisiTuru + " liseleme sayfasi   ***");
+        if (kisiTuru.equalsIgnoreCase("OGRENCI")) {// ogrenci listeleme
+            System.out.println(ogrenciListesi);
+        } else { // ogremen listeleniyor
+            for (Kisi k : ogretmenListesi
+            ) {
+                System.out.println(k.toString());
+            }
+        }
+    }
+
     private static void ekle() {
-        System.out.println("   ***   "+ kisiTuru+" ekleme sayfasi   ***");
+        System.out.println("   ***   " + kisiTuru + " ekleme sayfasi   ***");
         System.out.print("ad soyadini girniz: "); //parametre data'larini creae ediyoruz
         scan.nextLine();//dummy hayalet komut
         String adSoyad = scan.nextLine();
@@ -90,7 +183,7 @@ public class Islemler {
         System.out.print("yas girniz: ");
         int yas = scan.nextInt();
 
-        if (kisiTuru.equals("OGRENCI")){
+        if (kisiTuru.equals("OGRENCI")) {
             System.out.print("Ogrenci numarasi giriniz: ");
             scan.nextLine();//dummy hayalet komut
             String ogrcNo = scan.next();
@@ -101,10 +194,10 @@ public class Islemler {
 
         } else {
             System.out.print("Sicil numarasi giriniz");
-            String sicilNo = scan.nextLine();
+            String sicilNo = scan.next();
             System.out.print("bolum giriniz");
             String bolum = scan.nextLine();
-            Ogretmen muallim = new Ogretmen(adSoyad,kimlikNo,yas, sicilNo,bolum); //p'li constructor ogrc obj create edildi
+            Ogretmen muallim = new Ogretmen(adSoyad, kimlikNo, yas, sicilNo, bolum); //p'li constructor ogrc obj create edildi
             ogretmenListesi.add(muallim);
         }
     }
