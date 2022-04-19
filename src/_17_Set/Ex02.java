@@ -41,11 +41,9 @@ public class Ex02 {
         ArrayList<Integer> arrayListFark1 = new ArrayList<>(arrList1); // list1'de olup list2'de olmayanlar list1-list2
         ArrayList<Integer> arrayListFark2 = new ArrayList<>(arrList2); // list2'de olup list1'de olmayanlar list2-list1
 
-        //arrayListFark1 = arrList1;
         arrayListFark1.removeAll(arrList2);
         System.out.println("farkli list1 : " + arrayListFark1);
 
-       // arrayListFark2 = arrList2;
         arrayListFark2.removeAll(arrList1);
         System.out.println("farkli list 2 : " + arrayListFark2);
 
