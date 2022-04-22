@@ -1,4 +1,4 @@
-package JavaProjects.P06_KahveMakinesi.Kahve_makinesi02;
+package Projects.P06_KahveMakinesi.Kahve_makinesi02;
 
 public class Kahve {
     private String kahveNo;

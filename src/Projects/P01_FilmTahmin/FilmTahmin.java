@@ -1,10 +1,9 @@
-package projects.P01_FilmTahmin;
+package Projects.P01_FilmTahmin;
 
 import java.util.*;
 
 public class FilmTahmin {
 
-    static List<String> filmler = new ArrayList<>(Arrays.asList("JOKER", "INCEPTION", "PIYANIST", "GREENMILE", "LEON", "GODFATHER", "JURASSICPARK", "TITANIC"));
     /*
      TASK :
       yukarıdaki film listinde bulunan filmlerden herhangi birisini kullanıcının film ismini  görmeden
@@ -19,6 +18,7 @@ public class FilmTahmin {
       kullanıcının kaybedip veya kazandığını ve tahmin etmesi gereken filmin ismini  console yazdırınız.
 
      */
+    static List<String> filmler = new ArrayList<>(Arrays.asList("JOKER", "INCEPTION", "PIYANIST", "GREENMILE", "LEON", "GODFATHER", "JURASSICPARK", "TITANIC"));
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -50,11 +50,12 @@ public class FilmTahmin {
             System.out.print("yanlıs tahmin sayisi: " + (tahminSayısı - dogruTahminSayısı) + "/" + 2 * film.get(index).length() + "\ntahmin ettiginiz harfi giriniz : ");//yanlıs girilen tahmin sayisini print edildi
             harf = scan.next().toUpperCase().charAt(0);//film için tahmin edilen harf alındı
             str += harf;//harf str'ye atandı
-          if (!tahminEdilecekFilm.toString().contains(str)) {//tahminEdilecekFilm'de kullanıcıdan alınan harf yoksa tahmin sayısı artılıdı
-              tahminSayısı++;
-          } //else {//tahminEdilecekFilm'de kullanıcıdan alınan harf varsa tekrar uyarısı verildi
-          //     System.out.println(str + " harf zaten acıldı");
-          // }
+            if (!tahminEdilecekFilm.toString().contains(str)) {// tahminEdilecekFilm'de kullanıcıdan alınan harf yoksa tahmin sayısı artırildı
+                tahminSayısı++;
+            }
+            //else {//tahminEdilecekFilm'de kullanıcıdan alınan harf varsa tekrar uyarısı verildi
+            //     System.out.println(str + " harf zaten acıldı");
+            // }
             for (int i = 0; i < tahminEdilecekFilm.length(); i++) {
                 if (film.get(index).charAt(i) == harf) {//tahmin listeki edilen harf filmde varsa
                     if (!tahminEdilecekFilm.toString().contains(film.get(index).substring(i, i + 1))) {
