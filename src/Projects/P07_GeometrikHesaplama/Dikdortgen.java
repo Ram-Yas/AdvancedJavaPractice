@@ -1,27 +1,30 @@
-package JavaProjects.P07_GeometrikHesaplama;
+package Projects.P07_GeometrikHesaplama;
 
 public class Dikdortgen extends Sekil {
 
-	public Dikdortgen(double uzunKenar, double kisaKenar) {
-		super(uzunKenar, kisaKenar);
 
-	}
+    public Dikdortgen(double uzunKenar, double kisaKenar) {
+        super(uzunKenar, kisaKenar);
+    }
 
+    @Override
+    public double cevre() {
+        cevre = (kisaKenar + uzunKenar)*2;
+        return cevre;
+    }
 
-	public double cevreHesaplama() {
-		return super.cevreHesaplama();
-	}
+    @Override
+    public double alan() {
+        alan = kisaKenar*uzunKenar;
+        return alan;
+    }
 
-
-	public double alanHesaplama() {
-		//return uzunKenar*kisaKenar;
-		return super.alanHesaplama();
-	} 
-
-
-	@Override
-	public String toString() {
-		return "UzunKenar = " + uzunKenar + ", kisaKenar = " + kisaKenar + ", \n dikdortgen cevre = " + cevreHesaplama()
-				+ ", \n dikdortgen alan = " + alanHesaplama();
-	}
+    @Override
+    public String toString() {
+        return "Dikdortgen " +
+                "uzunKenar=" + uzunKenar +
+                ", kisaKenar=" + kisaKenar +
+                ", cevre=" + cevre() +
+                ", alan=" + alan ();
+    }
 }

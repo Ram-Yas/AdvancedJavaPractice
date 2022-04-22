@@ -1,24 +1,29 @@
-package JavaProjects.P07_GeometrikHesaplama;
+package Projects.P07_GeometrikHesaplama;
 
 public class Cember extends Sekil {
-	
-	public Cember(double yariCap) {
-		super(yariCap );
 
-	}
 
-	public double cevreHesaplama() {
-		return yariCap*2*3.14;
-		
-	}
+    public Cember(double yaricap) {
+        super(yaricap);
+    }
 
-	public double alanHesaplamaCember() {
-		return yariCap*yariCap*3.14;
-	}
+    @Override
+    public double cevre() {
+        cevre = 2*3.14*yaricap;
+        return cevre;
+    }
 
-	@Override
-	public String toString() {
-		return
-				"yariCap = " + yariCap + ", \n cember  cevre = " + cevreHesaplama()+", \n cember alan = "+alanHesaplamaCember();
-	}
+    @Override
+    public double alan() {
+        alan = Math.pow(yaricap,2)*3.14;
+        return alan;
+    }
+
+    @Override
+    public String toString() {
+        return "Cember " +
+                "yaricap=" + yaricap +
+                ", cevre=" + cevre()+
+                ", alan=" + alan() ;
+    }
 }

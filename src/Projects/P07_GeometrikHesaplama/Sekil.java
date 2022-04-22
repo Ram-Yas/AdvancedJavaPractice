@@ -1,29 +1,27 @@
-package JavaProjects.P07_GeometrikHesaplama;
+package Projects.P07_GeometrikHesaplama;
 
 public class Sekil {
 
-    double uzunKenar;
-    double kisaKenar;
-    double yariCap;
+   double yaricap;
+   double uzunKenar;
+   double kisaKenar;
+   double cevre;
+   double alan;
 
-    public Sekil(double uzunKenar, double kisaKenar) {
-        this.uzunKenar = uzunKenar;
-        this.kisaKenar = kisaKenar;
-    }
-
-    public Sekil(double yariCap) {
-        this.yariCap = yariCap;
-    }
-
-    public double cevreHesaplama() {
-       return (uzunKenar + kisaKenar) * 2;
+   public Sekil(double uzunKenar, double kisaKenar) {
+      this.uzunKenar = uzunKenar;
+      this.kisaKenar = kisaKenar;
    }
 
-    public double alanHesaplama() {
-        return uzunKenar * kisaKenar;
-    }
+   public Sekil(double yaricap){
+      this.yaricap = yaricap;
+   }
+   public double cevre(){
+       return cevre;
+   }
 
-    public double alanHesaplamaCember() {
-        return yariCap * yariCap * 3.14;
-    }
+   public double alan(){
+       return alan;
+   }
+
 }
