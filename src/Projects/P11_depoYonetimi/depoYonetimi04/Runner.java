@@ -1,10 +1,12 @@
-package JavaProjects.P11_depoYonetimi.depoYonetimi04;
+package Projects.P11_depoYonetimi.depoYonetimi04;
 
-import static JavaProjects.P11_depoYonetimi.depoYonetimi04.Islemler.menu;
+import static Projects.P11_depoYonetimi.depoYonetimi04.Islemler.girisPanel;
 
 public class Runner {
-    public static void main(String[] args) {
 
-        menu();
-    }
+        public static void main(String[] args) {
+
+            girisPanel();
+        }
+
 }

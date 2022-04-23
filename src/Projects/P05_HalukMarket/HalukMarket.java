@@ -109,7 +109,7 @@ public class HalukMarket {
         sepetFiyatlar.add(fiyatlar.get(secim)*kg);
     }
 
-    private static void urunListele() {
+    public static void urunListele() {
         System.out.println("No\t Urunler \t Fiyatlar");
         System.out.println("===\t =======\t =========");
 
