@@ -2,11 +2,10 @@ package Projects.P15OkulYonetimi;
 
 public class Runner {
 
-    public static void main(String[] args) {
-        
-        anaMenu();
+    public static void main(String[] args) throws InterruptedException {
+        Ogretmen.fakeOgtermenEkle();
+        Depo.anaMenu();
     }
 
-    private static void anaMenu() {
-    }
+
 }
