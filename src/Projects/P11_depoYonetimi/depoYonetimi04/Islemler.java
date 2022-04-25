@@ -17,32 +17,34 @@ public class Islemler {
     static HashMap<Integer, Urunler> urunler = new HashMap<>(); // urunleri depolanacagi bos map
 
     public static void girisPanel() {
-        System.out.println(R+"========================== İŞLEMLER =======================\r\n"
-                + "   ____________________              ____________________   \n"
-                + "   | 1-URUN TANIMLAMA |              |  2-MIKTAR GUNCELLE |   \n"
-                + "   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯              ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯   \n"
-                + "   ____________________              ____________________   \n"
-                + "   | 3-RAF GUNCELLEME |              |  4-URUN CIKISI    |   \n"
-                + "   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯              ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯   \n"
-                + "   ____________________              ____________________   \n"
-                + "   | 5-URUN LISTELE   |              |  6-CIKIS          |   \n"
-                + "   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯              ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯  ");
-
-        System.out.print("islem tercihinizi giriniz : ");
+        System.out.println(R + "========================== İŞLEMLER =======================\r\n"
+                + "   ____________________             ____________________    \n"
+                + "   | 1-URUN TANIMLAMA  |            | 2-MİKTAR GUNCELLEME|  \n"
+                + "   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯             ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯    \n"
+                + "   ____________________             ____________________    \n"
+                + "   | 3-RAF GUNCELLEME  |            | 4-URUN CIKISI     |   \n"
+                + "   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯             ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯    \n"
+                + "   ____________________             ____________________    \n"
+                + "   | 5-URUN LİSTELE    |            | 6-CIKIS           |   \n"
+                + "   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯             ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯       " + B);
+        System.out.print("ISLEM SECİNİZ : ");
         int secim = scan.nextInt();
 
         switch (secim) {
             case 1:
                 urunTanimla();
+                girisPanel();
                 break;
             case 2:
                 miktarGuncelle();
                 girisPanel();
                 break;
-            case 3:
+            case 3: //burasi tamamlandi
+                rafGuncelle();
                 girisPanel();
                 break;
-            case 4:
+            case 4: //burasi tamamlanacak
+                urunCikisi();
                 girisPanel();
                 break;
             case 5:
@@ -56,6 +58,29 @@ public class Islemler {
                 System.out.println("adam gibi deger gir gelmiyim oraya");
                 break;
         }
+    }
+
+    private static void urunCikisi() {
+        System.out.print("cikisi yapilacak urunun ID'sini giriniz");
+        int arananId = scan.nextInt();
+        if (urunler.keySet().contains(arananId)) {
+            System.out.print("Urunden hangi birimde cikilacagini giriniz");
+            String cikacakBirim = scan.next();
+        //    System.out.print("urundn ne kadar cikilacagini giriniz: ");
+          //  int urunCikisi = scan.nextInt();
+
+        }
+    }
+
+    private static void rafGuncelle() {
+        System.out.print("Guncelleyeceginiz urunun id giriniz");
+        int arananId = scan.nextInt();
+        if (urunler.keySet().contains(arananId)){
+            System.out.print("Guncel rafi giriniz");
+            String guncelRaf = scan.next();
+            urunler.get(arananId).setRaf(guncelRaf);
+            System.out.print("urun rafiniz guncel hale getirildi");
+        } else System.out.print("aradiginiz urun yok");
     }
 
     private static void miktarGuncelle() {
@@ -78,6 +103,12 @@ public class Islemler {
 
     private static void cikinizLutfen() {
         System.out.println("yine bekleriz");
+    }
+
+    private static void urunListele() {
+        System.out.println("*** Urun Listesi ***");
+        System.out.println(urunler);
+
     }
 
     private static void urunTanimla() {

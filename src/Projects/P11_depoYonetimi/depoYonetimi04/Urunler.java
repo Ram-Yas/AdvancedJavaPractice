@@ -1,7 +1,7 @@
 package Projects.P11_depoYonetimi.depoYonetimi04;
 
-public class Urunler { // POJO class model class
-  // private int id;
+public class Urunler { // POJO  model class
+
   private String urunIsmi;
   private String uretici;
   private int miktar;
