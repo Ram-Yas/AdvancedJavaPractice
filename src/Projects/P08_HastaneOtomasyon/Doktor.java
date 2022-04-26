@@ -1,4 +1,4 @@
-package JavaProjects.P08_HastaneOtomasyon;
+package Projects.P08_HastaneOtomasyon;
 
 public class Doktor {
 
