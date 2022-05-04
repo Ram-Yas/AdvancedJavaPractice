@@ -35,5 +35,4 @@ public class Ex01 {
             System.out.print(s+ " ");
         }
     }
-
 }
