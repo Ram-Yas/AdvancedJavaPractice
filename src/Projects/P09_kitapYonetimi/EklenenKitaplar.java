@@ -1,4 +1,4 @@
-package JavaProjects.P09_kitapYonetimi;
+package Projects.P09_kitapYonetimi;
 
 public class EklenenKitaplar {
 	
